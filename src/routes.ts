@@ -3,7 +3,7 @@ import { CreateCategoryController } from "./controllers/CreateCategoryController
 import { ListCategoriesController } from "./controllers/ListCategoriesController";
 import { EditCategoryController } from "./controllers/EditCategoryController";
 import { DeleteCategoryController } from "controllers/DeleteCategoryController";
-import { GetCategoryByIdController } from "controllers/GetCategoryById.Controller";
+import { GetCategoryByIdController } from "controllers/GetCategoryByIdController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
 

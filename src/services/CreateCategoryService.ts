@@ -8,6 +8,12 @@ interface CategoryProps {
 }
 
 class CreateCategoryService {
+  private prisma: PrismaClient;
+
+  constructor(prisma: PrismaClient) {
+    this.prisma = prisma;
+  }
+
   async execute({ title, description }: CategoryProps) {
     if (!title || !description) {
       throw new Error("Title and description are required");

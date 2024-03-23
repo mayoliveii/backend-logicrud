@@ -1,9 +1,10 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { CreateCategoryService } from "../services/CreateCategoryService";
+import prisma from "prisma";
 
 class CreateCategoryController {
   private async createCategory({ title, description }: { title: string; description: string }) {
-    const createCategoryService = new CreateCategoryService();
+    const createCategoryService = new CreateCategoryService(prisma);
     return await createCategoryService.execute({ title, description });
   }
 

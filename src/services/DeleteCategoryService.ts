@@ -1,10 +1,19 @@
+import { PrismaClient } from '@prisma/client';
 import prismaClient from '../prisma';
+
+const prisma = new PrismaClient();
 
 interface DeleteCategoryProps {
   id: string;
 }
 
 class DeleteCategoryService {
+  private prisma: PrismaClient;
+
+  constructor(prisma: PrismaClient) {
+    this.prisma = prisma;
+  }
+
   async execute({ id }: DeleteCategoryProps) {
     if (!id) {
       throw new Error('Id is required');
