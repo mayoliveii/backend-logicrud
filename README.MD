@@ -68,14 +68,6 @@ Migrations are like version control for your database, allowing us to update the
 
 To create a new migration, you can run the following command:
 
-## Migrations
-
-Migrations are like version control for your database, allowing us to update the database schema in a structured and organized way. We are using Prisma Migrate, which is a database schema migration tool that is built into Prisma.
-
-### Creating a Migration
-
-To create a new migration, you can run the following command:
-
 ```bash
 npx prisma migrate dev --name NameOfYourMigration
 ````
@@ -97,6 +89,21 @@ To revert the last migration, you can use the following command:
 npx prisma migrate rollback
 ````
 This command will undo the last applied migration.
+
+## Tests
+
+This project uses Jest for testing. To run the tests, use the following command:
+
+```bash
+yarn test
+```
+
+To generate a coverage report when running the tests, use the following command:
+
+```bash
+yarn test --coverage
+```
+
 
 ## Endpoints
 
