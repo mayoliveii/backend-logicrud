@@ -1,6 +1,6 @@
 # Backend LogiCRUD
 
-// TODO: add image here
+![BAckend img](./public/images/backend-img.png)
 
 ## Description
 
