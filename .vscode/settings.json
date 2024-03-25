@@ -2,7 +2,7 @@
   "sqltools.connections": [
     {
       "previewLimit": 50,
-      "server": "localhost",
+      "server": "categories-instance-1.c9ockii843yf.us-east-1.rds.amazonaws.com",
       "port": 5432,
       "driver": "PostgreSQL",
       "name": "postgres",
