@@ -19,21 +19,25 @@ This backend project is part of a CRUD (Create, Read, Update, Delete) applicatio
 - Edit Category: Updates category information.
 - Delete Category: Removes a category from the system.
 - List Categories: Retrieves a list of all categories.
-#### Timestamps
-- Records the creation, update, and deletion dates for each category.
 
 ## Database
-The backend uses PostgreSQL as its chosen database system. PostgreSQL is a SQL database that offers several advantages, making it a suitable choice for this project.
+The backend uses PostgreSQL as the chosen database system. This database has been deployed on **AWS RDS**. The URL for the database is:
+
+```json
+categories-instance-1.c9ockii843yf.us-east-1.rds.amazonaws.com
+```
+
+If you need the credentials to connect to the database, please contact me.
 
 ### Installation
-#### To run this project with PostgreSQL:
+#### To run this project locally with PostgreSQL:
 
 - Ensure PostgreSQL is installed on your machine.
 - Start the PostgreSQL server locally.
 - Make sure your `schema.prisma` file is correctly configured with the `Categories` model and the `db` datasource pointing to your PostgreSQL database.
 - Then, you will need to run: `npx prisma db push`
 - Run `npx prisma generate`
-- Configure the database (you need PostgreSQL installed):
+- Configure the database (you need PostgreSQL installed).
 
 ## Run the project
 Clone the repository:
@@ -57,6 +61,12 @@ Run the development server:
 
 ```
 npm run dev
+```
+
+### OR
+Use the deploy URL to make request:
+```json
+https://backend-logicrud-production.up.railway.app
 ```
 
 ## Migrations
@@ -91,27 +101,28 @@ This command will undo the last applied migration.
 
 ## Tests
 
+
 This project uses Jest for testing. To run the tests, use the following command:
 
 ```bash
-yarn test
+npm test
 ```
 
 To generate a coverage report when running the tests, use the following command:
 
 ```bash
-yarn test --coverage
+npm test --coverage
 ```
 
 
 ## Endpoints
 
-The base URL for the deployed application is: 
+The base URL of the deployed application is: 
 > https://backend-logicrud-production.up.railway.app/
 
 ### Create Category
 
-Endpoint: `POST` / `https://backend-logicrud-production.up.railway.app//create-category`
+Endpoint: `POST` / `https://backend-logicrud-production.up.railway.app/create-category`
 Description: Creates a new category record.
 
 Request Body:
@@ -128,7 +139,7 @@ Example Request:
 ```
 
 ### List Categories
-Endpoint: `GET` / `https://backend-logicrud-production.up.railway.app//list-categories`
+Endpoint: `GET` / `https://backend-logicrud-production.up.railway.app/list-categories`
 Description: Retrieves a list of all categories.
 
 Query Parameters:
@@ -150,7 +161,7 @@ https://backend-logicrud-production.up.railway.app/
 ```
 
 ### Delete Category
-Endpoint: `DELETE` / `https://backend-logicrud-production.up.railway.app//delete-category`
+Endpoint: `DELETE` / `https://backend-logicrud-production.up.railway.app/delete-category`
 Description: Deletes a category record.
 
 Query Parameters:
@@ -165,7 +176,7 @@ Example Request:
 ```
 
 ### Edit Category
-Endpoint: `POST` / `https://backend-logicrud-production.up.railway.app//edit-category`
+Endpoint: `POST` / `https://backend-logicrud-production.up.railway.app/edit-category`
 Description: Edits an existing category record.
 
 Request Body:
