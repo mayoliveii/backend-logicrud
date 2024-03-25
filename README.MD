@@ -100,7 +100,7 @@ npx prisma migrate rollback
 This command will undo the last applied migration.
 
 ## Tests
-
+![Tests coverage](./public/images/tests-coverage.png)
 
 This project uses Jest for testing. To run the tests, use the following command:
 
