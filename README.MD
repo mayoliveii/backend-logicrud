@@ -28,8 +28,7 @@ The backend uses PostgreSQL as its chosen database system. PostgreSQL is a SQL d
 ### Installation
 #### To run this project with PostgreSQL:
 
-- Ensure PostgreSQL is installed on your machine. You can download it from the official [PostgreSQL website](https://www.postgresqtupa
-l.org/download/).
+- Ensure PostgreSQL is installed on your machine.
 - Start the PostgreSQL server locally.
 - Make sure your `schema.prisma` file is correctly configured with the `Categories` model and the `db` datasource pointing to your PostgreSQL database.
 - Then, you will need to run: `npx prisma db push`
@@ -107,9 +106,12 @@ yarn test --coverage
 
 ## Endpoints
 
+The base URL for the deployed application is: 
+> https://backend-logicrud-production.up.railway.app/
+
 ### Create Category
 
-Endpoint: `POST` / `http://localhost:3000/create-category`
+Endpoint: `POST` / `https://backend-logicrud-production.up.railway.app//create-category`
 Description: Creates a new category record.
 
 Request Body:
@@ -126,7 +128,7 @@ Example Request:
 ```
 
 ### List Categories
-Endpoint: `GET` / `http://localhost:3000/list-categories`
+Endpoint: `GET` / `https://backend-logicrud-production.up.railway.app//list-categories`
 Description: Retrieves a list of all categories.
 
 Query Parameters:
@@ -138,17 +140,17 @@ Query Parameters:
 Example Request:
 
 ```gql
-http://localhost:3000/list-categories?startDate=2024-02-15T23:53:09.287Z&endDate=2024-02-17T23:53:09.287Z
+https://backend-logicrud-production.up.railway.app//list-categories?startDate=2024-02-15T23:53:09.287Z&endDate=2024-02-17T23:53:09.287Z
 ```
 
 or
 
 ```gql
-http://localhost:3000
+https://backend-logicrud-production.up.railway.app/
 ```
 
 ### Delete Category
-Endpoint: `DELETE` / `http://localhost:3000/delete-category`
+Endpoint: `DELETE` / `https://backend-logicrud-production.up.railway.app//delete-category`
 Description: Deletes a category record.
 
 Query Parameters:
@@ -163,7 +165,7 @@ Example Request:
 ```
 
 ### Edit Category
-Endpoint: `POST` / `http://localhost:3000/edit-category`
+Endpoint: `POST` / `https://backend-logicrud-production.up.railway.app//edit-category`
 Description: Edits an existing category record.
 
 Request Body:
